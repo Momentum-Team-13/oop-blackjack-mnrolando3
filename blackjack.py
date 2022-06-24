@@ -8,7 +8,7 @@ class Card():
         self.suit = suit
         # card point value
         self.value = value
-    
+
     def print_cards(self):
         print(f'The {self.rank} of {self.suit} is {self.value} points.')
 
@@ -56,7 +56,7 @@ class Deck():
                     # name = f"{rank} {suit_type}"
                     # name = Card(suit_type, value_type, rank_type)
                     self.cards.append(Card(suit_type, value_type, rank_type))
-                    print(f"this adds cards {self.cards}")
+                    return f"this adds cards {self.cards}"
 
     # random function. random.choice
     def shuffle_cards():
@@ -74,6 +74,7 @@ class Deck():
 
 
 deck = Deck()
+deck.add_cards()
 deck.print_cards()
 # suit = ['♠️', '♣️', '♥️', '♦️']
 # value = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
