@@ -1,5 +1,32 @@
 # Write your blackjack game here.
 
+class Card():
+    def __init__(self, suit, value, rank):
+        # card rank (face/number)
+        self.rank = rank
+        # card suit
+        self.suit = suit
+        # card point value
+        self.value = value
+        print(f'The {self.rank} of {self.suit} is {self.value} points.')
+
+    # def __str__(self):
+    #     return f"{self.value} {self.suit} {self.rank}"
+    # Not sure this method is needed
+
+    # add cards to deck -> should this be part of the deck class? 
+    # yeah, I think that makes more sense
+    # def add_to_deck(self):
+    #     for suit_type in suit:
+    #         for index in range(len(value)):
+    #             value_type = value[index]
+    #             rank_type = rank[index]
+    #             name = f"{rank} {suit_type}"
+    #             name = Card(suit_type, value_type, rank_type)
+    #             return name
+    #             deck.add_cards(name)
+
+
 class Deck():
     def __init__(self):
         self.cards = []
@@ -37,31 +64,6 @@ class Deck():
 # that is right, didn't think about that...
 
 
-class Card():
-    def __init__(self, suit, value, rank):
-        # card rank (face/number)
-        self.rank = rank
-        # card suit
-        self.suit = suit
-        # card point value
-        self.value = value
-
-    def __str__(self):
-        return f"{self.value} {self.suit} {self.rank}"
-
-    # add cards to deck -> should this be part of the deck class? 
-    # yeah, I think that makes more sense
-    # def add_to_deck(self):
-    #     for suit_type in suit:
-    #         for index in range(len(value)):
-    #             value_type = value[index]
-    #             rank_type = rank[index]
-    #             name = f"{rank} {suit_type}"
-    #             name = Card(suit_type, value_type, rank_type)
-    #             return name
-    #             deck.add_cards(name)
-
-
 deck = Deck()
 suit = ['♠️', '♣️', '♥️', '♦️']
 value = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -73,6 +75,6 @@ for suit_type in suit:
         name = f"{rank} {suit_type}"
         name = Card(suit_type, value_type, rank_type)
         # print(name)
-        deck.add_cards(name)
+#         deck.add_cards(name)
 
-print("deck.print_cards", deck.add_cards(name))
+# print("deck.print_cards", deck.add_cards(name))
