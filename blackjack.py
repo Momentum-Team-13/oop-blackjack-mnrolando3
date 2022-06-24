@@ -30,6 +30,7 @@ class Card():
 class Deck():
     def __init__(self):
         self.cards = []
+        print(f'deck? {self.cards}')
 
     # def __str__(self):
     #     for card in self.cards:
@@ -46,7 +47,6 @@ class Deck():
 
     def add_cards(self, card):
         self.cards.append(card)
-        print('print length of list', len(self.cards))
         return f"this adds cards {self.cards}"
 
     # random function. random.choice
@@ -75,6 +75,6 @@ for suit_type in suit:
         name = f"{rank} {suit_type}"
         name = Card(suit_type, value_type, rank_type)
         # print(name)
-#         deck.add_cards(name)
+        deck.add_cards(name)
 
-# print("deck.print_cards", deck.add_cards(name))
+print("deck.print_cards", deck.add_cards(name))
